@@ -21,7 +21,6 @@ sudo apt-get install -y postgresql-9.5 postgresql-client-9.5 postgresql-contrib-
 echo "Changing to dummy password"
 sudo -u postgres psql postgres -c "ALTER USER postgres WITH ENCRYPTED PASSWORD 'postgres'"
 sudo -u postgres psql postgres -c "CREATE EXTENSION adminpack";
-sudo -u postgres createdb testdb -O postgres
 
 echo "Configuring postgresql.conf"
 sudo echo "listen_addresses = '*'" >> /etc/postgresql/9.5/main/postgresql.conf
