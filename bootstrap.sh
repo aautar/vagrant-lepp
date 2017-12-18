@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:nginx/stable
 sudo add-apt-repository -y ppa:ondrej/php
 sudo apt-get -y update
 
@@ -9,11 +10,8 @@ if ! [ -L /var/www ]; then
   ln -fs /vagrant/public /var/www
 fi
 
-# Install Git
-sudo apt-get install git -y
-
 # Install nginx
-sudo apt-get install -y nginx
+sudo apt-get install -y nginx=1.12.*
 
 #Install PostgreSQL
 sudo apt-get install -y postgresql-9.5 postgresql-client-9.5 postgresql-contrib-9.5
