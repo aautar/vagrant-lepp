@@ -32,7 +32,7 @@ echo "Patching complete, restarting postgresql"
 sudo service postgresql restart
 
 # Install PHP
-sudo apt-get -y install php7.2 php7.2-cgi php7.2-fpm php7.2-curl php7.2-mbstring
+sudo apt-get -y install php7.2 php7.2-cgi php7.2-fpm php7.2-curl php7.2-mbstring php7.2-pgsql
 
 # Stop servers
 sudo service nginx stop
