@@ -97,6 +97,9 @@ server
 }
 EOF
 
+# Turn sendfile off due to VirtualBox bug (https://github.com/aautar/vagrant-lemp/issues/2)
+sudo sed -i 's/sendfile on;/sendfile off;/' /etc/nginx/nginx.conf
+
 # Restart servers
 sudo service php7.2-fpm restart
 sudo service nginx restart
